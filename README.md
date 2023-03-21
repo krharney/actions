@@ -25,7 +25,7 @@ Perform these steps before starting the module.
 1. Check your email for the account verification link, and verify your account.
 1. Take note of your Auth0 tenant name located in the upper left corner of the [Auth0 Dashboard](https://manage.auth0.com).
 
-![tenant name](tenant-name.png)
+![tenant name](images/tenant-name.png)
 
 ## Create Test Users
 
@@ -43,7 +43,7 @@ Set up two test users for use in the lab.
       
     Click **Edit** and then **Set email as verified** to change the status to verified. 
 
-    ![email pending edit button](email-pending.png)
+    ![email pending edit button](images/email-pending.png)
 
 2. Click **Back to Users** and then the **+ Create User** button in the upper right. Create another user with the following credentials, again using the default Connection. 
    
@@ -76,7 +76,7 @@ But what if you want an Auth0 feature that does not exist? Each business's needs
 
 Actions allow you to write your own JavaScript code that is executed at runtime when triggered by an authentication-related event, such as a login or password change. Actions are secure, self-contained functions that run on Auth0's infrastructure.
 
-![Actions dashboard](actions.png)
+![Actions dashboard](images/actions.png)
 
 One common use case for Actions is progressive profiling. Rather than having an end user fill out a lengthy sign up form, custom code can be added to the Login flow so that on future logins, users will be asked for additional information.
 
@@ -84,7 +84,7 @@ There are also prebuilt Actions available in the Marketplace for a variety of us
 
 Whether you have selected an Action from the Marketplace or are adding your own, the Action must be added to a Flow. Each flow happens when a specific trigger is invoked.
 
-![Flows](flows.png)
+![Flows](images/flows.png)
 
 ## Lab: Implement an Auth0 Action
 
@@ -126,7 +126,7 @@ Note that the Action is deployed, but it will not be executed until it has been 
 1. Click **Back to flow** in the upper left corner. 
 2. In the right sidebar, under **Add Action**, select the **Custom** tab.
 3. Drag the **Block Users** Action into the flow.
-![add action to flow](add-to-flow.png)
+![add action to flow](images/add-to-flow.png)
 4. Click **Apply**.
      
 Now the Action is active and will affect all subsequent logins. In the next section, you can try it out. 
@@ -134,7 +134,7 @@ Now the Action is active and will affect all subsequent logins. In the next sect
 ### Check that the Action is working
 1. Navigate to **Getting Started** in the sidebar of the Dashboard. 
 2. Scroll down to the section that says "Try your Login box" and click **Try it out**. This shows you the default Auth0 Universal Login box. Without any customizations, this is what end users see when they navigate to your app. 
-![try your login box](try-your-login-box.png)
+![try your login box](images/try-your-login-box.png)
 
 Next, you will try logging in as each of your end users and see the results.  
 
@@ -144,11 +144,11 @@ Next, you will try logging in as each of your end users and see the results.
     Password: TestPW123!!  
     ```
 
-![it works](it-works.png)
+![it works](images/it-works.png)
 
 4. Since this page does not have a Logout button, you must manually log `aron.larson@example.com` out of Auth0 by navigating to the logout URL at `{your-tenant-name}.us.auth0.com/v2/logout`
     *  If you don't recall your tenant name, you should be able to find it in the upper left hand corner of the Dashboard. 
-![your tenant name](your-tenant-name.png)    
+![your tenant name](images/your-tenant-name.png)    
     * After visiting the logout URL, you should see "OK" in the upper left corner.
 
 5. Navigate back to the **[Auth0 Dashboard](manage.auth0.com) > Getting Started > Try your Login box** section and click **Try it out** again. 
@@ -157,7 +157,7 @@ Next, you will try logging in as each of your end users and see the results.
     Username: candice.diaz@example.com
     Password: TestPW123!!
     ```
-![error message](bummer.png)
+![error message](images/bummer.png)
 
   Here you can see that the Login failed. This error message could be consumed by your application and display an appropriately customized error message to your end user.
 
@@ -166,7 +166,7 @@ Next, you will try logging in as each of your end users and see the results.
 ### Remove an Action from a Flow
 1. Navigate to **Actions > Flows > Login**. 
 2. Select the **Block Users** Action in the Flow. Then, while it is selected, click the **Remove** button. 
-![remove_block_users](remove-block-users.png)
+![remove_block_users](images/remove-block-users.png)
 3. Click the **Apply** button in the upper right corner.
 
 ### Apply your knoweldge
