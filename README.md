@@ -1,12 +1,11 @@
-- [Auth0 Actions](#auth0-actions)
-  - [Setup](#setup)
-    - [Sign up for a free Auth0 account](#sign-up-for-a-free-auth0-account)
-    - [Create Test Users](#create-test-users)
-    - [Instructional notes](#instructional-notes)
-  - [Training Module - Extend and Customize with Auth0 Actions](#training-module---extend-and-customize-with-auth0-actions)
-    - [Learning Objectives](#learning-objectives)
-    - [A Brief Introduction to Auth0](#a-brief-introduction-to-auth0)
-    - [Auth0 Actions](#auth0-actions-1)
+- [Setup](#setup)
+  - [Sign up for a free Auth0 account](#sign-up-for-a-free-auth0-account)
+  - [Create Test Users](#create-test-users)
+  - [Instructional notes](#instructional-notes)
+- [Training Module: Extend and Customize with Auth0 Actions](#training-module-extend-and-customize-with-auth0-actions)
+  - [Learning Objectives](#learning-objectives)
+  - [A Brief Introduction to Auth0](#a-brief-introduction-to-auth0)
+  - [Auth0 Actions](#auth0-actions)
   - [Lab: Implement an Auth0 Action](#lab-implement-an-auth0-action)
     - [Create an Auth0 Action](#create-an-auth0-action)
     - [Add the Action to a Flow](#add-the-action-to-a-flow)
@@ -15,11 +14,11 @@
     - [Apply your knoweldge](#apply-your-knoweldge)
   - [Conclusion](#conclusion)
 
-# Auth0 Actions
+# Setup
 
-## Setup
+Perform these steps before starting the module. 
 
-### Sign up for a free Auth0 account 
+## Sign up for a free Auth0 account 
 
 1. Visit [auth0.com](https://www.auth0.com) and click the **Sign up** button. 
 1. Enter an email address, create a password, and complete any other required steps. 
@@ -28,7 +27,7 @@
 
 ![tenant name](tenant-name.png)
 
-### Create Test Users
+## Create Test Users
 
 Set up two test users for use in the lab. 
 
@@ -53,30 +52,25 @@ Set up two test users for use in the lab.
 
 3. Leave this user's email as pending. Do not change it to verified. 
 
-
-### Instructional notes
-
-
+## Instructional notes
 
 1. This activity assumes basic JavaScript skills as well as an understanding of basic technical concepts – web development, applications, APIs, etc.
 1. It is not a security best practice to provide identical passwords for all learners. Ideally, a password generator could provide unique passwords for each learner. 
 1. In the "Apply your knowledge" section, a solution is provided. In a lab environment, a test could be set up to check it automatically.
 
-## Training Module - Extend and Customize with Auth0 Actions
+# Training Module: Extend and Customize with Auth0 Actions
 
-
-### Learning Objectives 
+## Learning Objectives 
 
 By the end of this lesson, you will be able to:
 1. Describe use cases for Auth0 Actions
 2. Create and deploy an Action 
 
-
-### A Brief Introduction to Auth0
+## A Brief Introduction to Auth0
 
 Auth0 is a tool to add authentication and authorization to your applications. At its simplest, Auth0 provides a customizable login box along with tools to connect to your apps. With Auth0, developers can implement single sign on, multifactor authentication, or passwordless authentication in just a few clicks. Users can be sourced from various identity providers, such as Google and Instagram, or from custom connections. Auth0 simplifies the development process by providing SDKs and APIs to handle identity.
 
-### Auth0 Actions
+## Auth0 Actions
 
 But what if you want an Auth0 feature that does not exist? Each business's needs vary, and you may need something beyond the standard features. In these cases, Auth0 Actions allow for greater control and customization of your implementation.
 
