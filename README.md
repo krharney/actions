@@ -88,7 +88,7 @@ One common use case for Actions is progressive profiling. Rather than having an 
 
 There are also prebuilt Actions available in the Marketplace for a variety of uses. For example, after registration you can have end users perform age verification with Ageware or connect with DataGuard to collect customer consent and preferences.
 
-Whether you have selected an Action for the Marketplace or are adding your own, the Action must be added to a Flow. Each flow happens when a specific trigger is invoked.
+Whether you have selected an Action from the Marketplace or are adding your own, the Action must be added to a Flow. Each flow happens when a specific trigger is invoked.
 
 ![Flows](flows.png)
 
@@ -102,7 +102,7 @@ In this lab you will create an action that blocks specific users. It will be add
 2. Select the **Login** flow.
 3. To the right of **Add Action**, click the **"+"** button and select **Build Custom**. 
 4. Name the action **Block Users**. Leave the default values for Trigger **Login / Post Login** and Runtime **Node 16**. Click the **Create** button.
-5. Delete the boilerplate code from the editor, and replace with the following code.
+5. Delete the boilerplate code from the editor, and replace with the following function.
 
     ```
     exports.onExecutePostLogin = async (event, api) => {
@@ -120,26 +120,26 @@ In this lab you will create an action that blocks specific users. It will be add
 
     };
     ```
-    The boilerplate code for each flow varies slightly, but all of the functions receive an event object as their first parameter, a read-only object containing all the inputs and context about this event. Some specific triggers also receive an API object. The operations in the API object depend on the event triggered.
+    The boilerplate code for each flow varies slightly, but all of the functions receive an event object as their first parameter, which is a read-only object containing all the inputs and context about this event. Some specific triggers also receive an API object. The operations in the API object depend on the event triggered.
 
     In this case, the API object for the Login flow has the `api.access.deny` method that blocks the user.  
 
-1. Click the Deploy button in the upper right corner.
+1. Click the **Deploy** button in the upper right corner.
        
 Note that the Action is deployed, but it will not be executed until it has been added to a flow. It is not yet attached to the Login trigger, so even if a user logs in, it will not run.
 
 ### Add the Action to a Flow
-1. Click "Back to flow" in the upper left corner. 
-2. In the right sidebar, under Add Action, select the Custom tab.
+1. Click **Back to flow** in the upper left corner. 
+2. In the right sidebar, under **Add Action**, select the **Custom** tab.
 3. Drag the **Block Users** Action into the flow.
 ![add action to flow](add-to-flow.png)
-4. Click Apply.
+4. Click **Apply**.
      
 Now the Action is active and will affect all subsequent logins. In the next section, you can try it out. 
 
 ### Check that the Action is working
 1. Navigate to **Getting Started** in the sidebar of the Dashboard. 
-2. Scroll down to the section that says "Try your Login box" and click "Try it out". This shows you the default Auth0 Universal Login box. Without any customizations, this is what end users see when they navigate to your app. 
+2. Scroll down to the section that says "Try your Login box" and click **Try it out**. This shows you the default Auth0 Universal Login box. Without any customizations, this is what end users see when they navigate to your app. 
 ![try your login box](try-your-login-box.png)
 
 Next, you will try logging in as each of your end users and see the results.  
@@ -152,7 +152,7 @@ Next, you will try logging in as each of your end users and see the results.
 
 ![it works](it-works.png)
 
-4. Since this page does not have a Logout button, you must manually log aron.larson@example.com out of Auth0 by navigating to the logout URL at `{your-tenant-name}.us.auth0.com/v2/logout`
+4. Since this page does not have a Logout button, you must manually log `aron.larson@example.com` out of Auth0 by navigating to the logout URL at `{your-tenant-name}.us.auth0.com/v2/logout`
     *  If you don't recall your tenant name, you should be able to find it in the upper left hand corner of the Dashboard. 
 ![your tenant name](your-tenant-name.png)    
     * After visiting the logout URL, you should see "OK" in the upper left corner.
@@ -164,7 +164,8 @@ Next, you will try logging in as each of your end users and see the results.
     Password: TestPW123!!
     ```
 ![error message](bummer.png)
-   * Here you can see that the Login failed. This error message could be consumed by your application and display an appropriately customized error message to your end user.
+
+  Here you can see that the Login failed. This error message could be consumed by your application and display an appropriately customized error message to your end user.
 
 7. Since the error has not been handled by an application, you still must manually log the user out by navigating to `{your-tenant-name}.us.auth0.com/v2/logout`.
 
